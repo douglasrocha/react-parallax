@@ -66,6 +66,11 @@ var Parallax = (function (_React$Component) {
 				'div',
 				{ className: 'react-parallax' },
 				this.props.bgImage ? _react2['default'].createElement('img', { className: 'react-parallax-bgimage', src: this.props.bgImage, ref: 'bgImage', alt: '' }) : '',
+				this.props.bgVideo ? _react2['default'].createElement(
+					'video',
+					{ autoPlay: true, loop: true, muted: true, ref: 'bgImage', className: 'react-parallax-bgimage' },
+					_react2['default'].createElement('source', { src: this.props.bgVideo, type: 'video/mp4' })
+				) : '',
 				_react2['default'].createElement(
 					'div',
 					{ className: 'react-parallax-content', style: this.childStyle, ref: 'content' },
@@ -254,7 +259,7 @@ var Parallax = (function (_React$Component) {
 
 exports['default'] = Parallax;
 Parallax.propTypes = {
-	bgImage: _react2['default'].PropTypes.string,
+	bgVideo: _react2['default'].PropTypes.string,
 	bgColor: _react2['default'].PropTypes.string,
 	strength: _react2['default'].PropTypes.number,
 	blur: _react2['default'].PropTypes.number

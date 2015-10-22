@@ -32,6 +32,11 @@ export default class Parallax extends React.Component {
 				{this.props.bgImage ? (
 					<img className="react-parallax-bgimage" src={this.props.bgImage} ref="bgImage" alt=""/>
 				) : ''}
+				{this.props.bgVideo ? (
+					<video autoPlay loop muted ref="bgImage" className="react-parallax-bgimage">
+              <source src={this.props.bgVideo} type="video/mp4" />
+          </video>
+				) : ''}
 				<div className="react-parallax-content" style={this.childStyle} ref="content">
 					{this.props.children}
 				</div>
@@ -115,12 +120,12 @@ export default class Parallax extends React.Component {
 		}
 		let height = autoHeight ? 'auto' : Math.floor(this.contentHeight + this.props.strength);
 		let width = !autoHeight ? 'auto' : this.contentWidth;
-		
+
 		this.img.style.WebkitTransform = 'translate3d(-50%, -' + backPos + 'px, 0)';
 		this.img.style.transform = 'translate3d(-50%, -' + backPos + 'px, 0)';
 		this.img.style.height = height;
 		this.img.style.width = width;
-		
+
 		if (this.props.blur) {
 			this.img.style.WebkitFilter = 'blur(' + this.props.blur + 'px)';
 			this.img.style.filter = 'blur(' + this.props.blur + 'px)';
@@ -175,7 +180,7 @@ export default class Parallax extends React.Component {
 			d = document,
 			e = d.documentElement,
 			g = d.getElementsByTagName('body')[0];
-		
+
 		return w.innerHeight || e.clientHeight || g.clientHeight;
 	}
 
@@ -200,7 +205,7 @@ export default class Parallax extends React.Component {
  * @param {Number} blur - pixel value for background image blur, default: 0
  */
 Parallax.propTypes = {
-	bgImage: React.PropTypes.string,
+	bgVideo: React.PropTypes.string,
 	bgColor: React.PropTypes.string,
 	strength: React.PropTypes.number,
 	blur: React.PropTypes.number
