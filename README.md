@@ -1,6 +1,7 @@
 # react-parallax
 
 > A react component for simple parallax effect
+> With a primitive video parallax effect
 
 ### React 0.14.0 or higher is required since version 0.2.0
 
@@ -9,6 +10,8 @@
 ```sh
 npm install react-parallax --save-dev
 ```
+
+## Monkey patch for using video via react-parallax
 
 ## [Demo](http://rrutsche.github.io/#parallax)
 
@@ -50,7 +53,7 @@ The children are used to display any content inside the react-parallax component
 ## Development
 
 Initial set up, run:
-    
+
 ```sh
 npm install
 ```
@@ -65,4 +68,3 @@ Port on Windows is 80, 8080 on all other OS by default. Can be set with option -
 # License
 
 MIT
-
