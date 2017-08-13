@@ -152,7 +152,7 @@ module.exports = function (grunt) {
 	});
 
 
-	grunt.registerTask('build-dist', ['clean:dist', 'eslint', 'babel:dist', 'uglify:dist', 'copy']);
+	grunt.registerTask('build-dist', ['clean:dist', 'babel:dist', 'uglify:dist', 'copy']);
 	grunt.registerTask('build-kitchensink', ['clean:kitchensink', 'eslint', 'babel:dist', 'browserify:kitchensink', 'copy']);
 	grunt.registerTask('build-test', ['clean:test', 'eslint', 'browserify:test']);
 
