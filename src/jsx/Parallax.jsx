@@ -34,7 +34,7 @@ export default class Parallax extends React.Component {
 				) : ''}
 				{this.props.bgVideo ? (
 					<video autoPlay loop muted ref="bgImage" className="react-parallax-bgimage">
-              <source src={this.props.bgVideo} type="video/mp4" />
+              <source src={this.props.bgVideo} type="video/ogg" />
           </video>
 				) : ''}
 				<div className="react-parallax-content" style={this.childStyle} ref="content">
